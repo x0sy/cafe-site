@@ -2,11 +2,13 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 100%;
+    /*16px*/
 }
 
 .gnav{
     display: none;
-/*    turn into flex after scrolling past mainvis*/
+    /*turn into flex after scrolling past mainvis*/
     height: 150px;
     width: 100%;
     align-items: center;
@@ -23,8 +25,9 @@ html{
 }
 
 .mainvis{
-    background: url(../img/Biaseto_11.jpg);
+    background: url(../img/OR%20Espresso%20Bar--1.jpg);
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -36,4 +39,30 @@ html{
 
 .mainvis-logo{
     display: block;
+}
+
+.maincon{
+    margin: 0 5%;
+}
+
+.maincon__news{
+    text-align: center;
+}
+
+.maincon__news-head{
+    font-size: 1.5rem;
+    /*24px*/
+    line-height: 3rem;
+}
+
+.maincon__news-list{
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 40%;
+    line-height: 2rem;
+}
+
+.maincon__news-date, .maincon__news-title{
+    flex-basis: 50%;
 }
