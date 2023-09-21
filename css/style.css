@@ -26,9 +26,10 @@ html{
 
 .mainvis{
     background: url(../img/OR%20Espresso%20Bar--1.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    margin-bottom: 150px;
 }
 
 .mainvis-overlay{
@@ -42,17 +43,19 @@ html{
 }
 
 .maincon{
-    margin: 0 5%;
+    margin: 0 15%;
 }
 
 .maincon__news{
     text-align: center;
+    margin-bottom: 150px;
 }
 
 .maincon__news-head{
     font-size: 1.5rem;
     /*24px*/
     line-height: 3rem;
+    margin-bottom: 20px;
 }
 
 .maincon__news-list{
@@ -65,4 +68,29 @@ html{
 
 .maincon__news-date, .maincon__news-title{
     flex-basis: 50%;
+}
+
+.maincon__about{
+    display: flex;
+}
+
+.maincon__about-head{
+    flex: 3;
+    letter-spacing: .2rem;
+}
+
+.maincon__about-txt{
+    flex: 3;
+    width: 300px;
+    height: 200px;
+    line-height: 1.5rem;
+    box-shadow: 9px 9px 9px #eee;
+}
+
+.maincon__about-imgwrap{
+    flex: 2;
+}
+
+.maincon__about-img{
+    width: 100%;
 }
