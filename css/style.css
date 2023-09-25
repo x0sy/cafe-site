@@ -3,8 +3,8 @@
 html{
     scroll-behavior: smooth;
     font-size: 100%;
-    color: #444;
     /*16px*/
+    color: #444;
 }
 
 .gnav{
@@ -15,6 +15,7 @@ html{
     align-items: center;
     justify-content: center;
     border-bottom: #000000 solid 1px;
+    background: white;
 
     position: sticky;
     top: 0px;
@@ -33,12 +34,61 @@ html{
     margin-bottom: 150px;
 }
 
-.mainvis-logowrap{
+.mainvis-logowrap, .mainvis-navwrap{
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     justify-content: center;
+    position: absolute;
+}
+
+.mainvis__nav{
+    height: 80px;
+    width: 70%;
+
+    display: flex;
+    align-items: center;
+
+    background: #eee;
+    border-radius: 15px;
+
+    list-style: none;
+
+/*make underlying elements clickable*/
+    pointer-events: auto;
+}
+
+.mainvis__nav-item:first-child{
+    text-align: center;
+    flex: 4;
+}
+
+.mainvis__nav-item:nth-child(2){
+    text-align: left;
+    flex: 5;
+}
+
+.mainvis__nav-item:nth-child(3){
+    text-align: right;
+    flex: 5;
+}
+
+.mainvis__nav-item:last-child{
+    text-align: center;
+    flex: 4;
+}
+
+.mainvis__nav-link{
+    text-decoration: none;
+    font-weight: bold;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.mainvis__nav-link:hover{
+    color: red;
+    transition: color 0.2s;
 }
 
 .mainvis-overlay{
@@ -51,6 +101,9 @@ html{
 */
     width: 100%;
     height: 100%;
+
+/*make underlying elements clickable*/
+    pointer-events: none;
 }
 
 .mainvis-logo{
@@ -58,10 +111,12 @@ html{
 }
 
 .maincon{
-    margin: 0 15%;
+    margin: 0 10%;
 }
 
 .maincon__news{
+    /*yaa maybe nvm b*/
+    display: none;
     text-align: center;
     margin-bottom: 150px;
 }
@@ -109,16 +164,6 @@ html{
     writing-mode: vertical-lr;
 }
 
-.maincon__about-head:before{
-/*
-    using -webkit-text-stroke insteadge
-    display: block;
-    content: "about";
-    color: black;
-    transform: translateX(100%);
-*/
-}
-
 .maincon__about-txt{
     flex: 10;
     padding: 25px 50px;
@@ -155,13 +200,16 @@ html{
 }
 
 .maincon__access-txt{
-    flex: 3;
+    flex: 2;
     align-self: center;
+    text-align: left;
     line-height: 2rem;
+    padding-left: 50px;
 }
 
 .maincon__access-map{
-    flex: 6;
+    flex: 5;
+    filter: grayscale(0.2);
 }
 
 .foot{
@@ -195,14 +243,14 @@ html{
 }
 
 .foot__sns{
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     display: flex;
     justify-content: flex-start;
 }
 
 .foot__sns-link{
-    margin-right: 1rem;
+    margin-right: .7rem;
 
     transition: fill 0.2s;
 }
