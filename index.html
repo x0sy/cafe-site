@@ -5,13 +5,12 @@
     <title>Cafe・ド・リシャス | HOME</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
-    <script type="text/javascript" src=""></script>
 </head>
 <body id="top">
-    <header class="gnav">
+    <header class="gnav" id="gnav">
         <a href="menu.html" class="gnav-link">Menu</a>
         <a href="campaign.html" class="gnav-link">Campaign</a>
-        <a href="#" class="gnav-logo-link"><img src="" alt="" class="gnav-logo"></a>
+        <a href="#" class="gnav-logo-link"><img src="img/logo2.png" alt="" class="gnav-logo"></a>
         <a href="company.html" class="gnav-link">Company</a>
         <a href="#access" class="gnav-link">Access</a>
     </header>
@@ -34,7 +33,7 @@
                </ul>
            </div>
             <div class="mainvis-logowrap">
-                <img src="img/logo.png" alt="logo" class="mainvis-logo">
+                <a href="#about" class="mainvis-logolink"><img src="img/logo.png" alt="logo" class="mainvis-logo"></a>
             </div>
         </div>
     </div>
@@ -87,5 +86,18 @@
         <p class="foot-txt2">月〜土曜日 0600-2000<br>日曜定休<br>LO 1930</p>
         <a href="#top" class="foot-top">top</a>
     </footer>
+    <script>
+        var vh = window.innerHeight;
+
+        window.onscroll = function(){
+              if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh){
+//                    document.getElementById("gnav").style.display = "flex";
+                    document.getElementById("gnav").style.transform = "translateY(0)";
+              } else {
+                    document.getElementById("gnav").style.transform = "translateY(-100%)";
+//                    document.getElementById("gnav").style.display = "none";
+              }
+        };
+    </script>
 </body>
 </html>
