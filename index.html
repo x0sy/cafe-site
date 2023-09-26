@@ -6,9 +6,16 @@
     <title>Cafe・ド・リシャス | Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .gnav{
+            @media (min-width: 900px){
+                transform: translateY(-100%);
+            }
+        }
+    </style>
 </head>
 <body id="top">
-    <header class="gnav" id="gnav" style="transform: translateY(-100%);">
+    <header class="gnav" id="gnav">
         <a href="menu.html" class="gnav-link">Menu</a>
         <a href="campaign.html" class="gnav-link">Campaign</a>
         <a href="#" class="gnav-logo-link"><img src="img/logo2.png" alt="" class="gnav-logo"></a>
@@ -90,16 +97,25 @@
     <script>
         var vh = window.innerHeight;
 
-        if(screen.width > 900){
+        if(screen.width >= 900){
             window.onscroll = function(){
                   if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh){
-    //                    document.getElementById("gnav").style.display = "flex";
                         document.getElementById("gnav").style.transform = "translateY(0)";
                   } else {
                         document.getElementById("gnav").style.transform = "translateY(-100%)";
-    //                    document.getElementById("gnav").style.display = "none";
                   }
             };
+        }
+
+        if(screen.width <= 899){
+            var hamb = document.getElementById("hamburger");
+            var gnavObj = document.getElementById("gnav");
+            hamb.addEventListener("click", function(){
+                gnavObj.style.display="block";
+                gnavObj.style.opacity="1";
+
+                hamb.classList.toggle("hamburgerx");
+            });
         }
     </script>
 </body>
