@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale-1.0">
     <title>Cafe・ド・リシャス | Home</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -57,7 +58,7 @@
             </div>
         </div>
         <div class="maincon__access" id="access">
-           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.417268796782!2d139.7007792614528!3d35.69134807246958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda50030345%3A0x30ed786213f4e9b9!2z44CSMTYwLTAwMjIg5p2x5Lqs6YO95paw5a6_5Yy65paw5a6_77yT5LiB55uu!5e0!3m2!1sja!2sjp!4v1695607819386!5m2!1sja!2sjp" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maincon__access-map"></iframe>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.417268796782!2d139.7007792614528!3d35.69134807246958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cda50030345%3A0x30ed786213f4e9b9!2z44CSMTYwLTAwMjIg5p2x5Lqs6YO95paw5a6_5Yy65paw5a6_77yT5LiB55uu!5e0!3m2!1sja!2sjp!4v1695607819386!5m2!1sja!2sjp" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maincon__access-map"></iframe>
             <p class="maincon__access-txt">〒111-1111<br>東京都新宿区新宿３丁目１−１<br>JR新宿駅から徒歩1分</p>
             <h2 class="maincon__access-head">Access</h2>
         </div>
@@ -89,15 +90,17 @@
     <script>
         var vh = window.innerHeight;
 
-        window.onscroll = function(){
-              if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh){
-//                    document.getElementById("gnav").style.display = "flex";
-                    document.getElementById("gnav").style.transform = "translateY(0)";
-              } else {
-                    document.getElementById("gnav").style.transform = "translateY(-100%)";
-//                    document.getElementById("gnav").style.display = "none";
-              }
-        };
+        if(screen.width > 900){
+            window.onscroll = function(){
+                  if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh){
+    //                    document.getElementById("gnav").style.display = "flex";
+                        document.getElementById("gnav").style.transform = "translateY(0)";
+                  } else {
+                        document.getElementById("gnav").style.transform = "translateY(-100%)";
+    //                    document.getElementById("gnav").style.display = "none";
+                  }
+            };
+        }
     </script>
 </body>
 </html>
