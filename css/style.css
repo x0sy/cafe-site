@@ -289,11 +289,14 @@ html{
 
 .maincon__about-imgwrap{
     flex: 12;
+    box-shadow: 10px 5px 10px 0 rgba(0, 0, 0, 0.3);
+    background: url(../img/Caf_-Presse_5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .maincon__about-img{
     width: 100%;
-    box-shadow: 10px 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .maincon__access{
