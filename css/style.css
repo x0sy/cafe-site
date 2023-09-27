@@ -15,22 +15,22 @@ html{
         height: 100px;
         padding: 10px 15%;
         margin: -121px auto 0 auto;
-        justify-content: space-between;
-        border-bottom: #666 solid 1px;
         transition: transform 0.5s;
-        display: flex;
+        justify-content: space-between;
     }
 
     @media (max-width: 899px){
-        width: 100vw;
-        height: 100vh;
-        flex-direction: column;
+/*
+        height: 100px;
+        padding: 20px 0;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+*/
         display: none;
-        opacity: 0;
-        transition: opacity 0.4s;
     }
+    border-bottom: #666 solid 1px;
+    display: flex;
     position: sticky;
     top: 0px;
     background: white;
@@ -39,36 +39,44 @@ html{
 
 .gnav-link{
     @media (min-width: 900px){
-        align-self: center;
         font-size: 1.25rem;
         /*20px*/
     }
 
     @media (max-width: 899px){
-        font-size: 2rem;
-        /*32px*/
-        line-height: 5rem;
+        font-size: 1rem;
+/*        16px*/
+        min-width: 0;
     }
     color: #444;
+    align-self: center;
 }
 
-.gnav-link, .mainvis__nav-link{
+.gnav-link, .mainvis__nav-link, .foot__nav-link{
     text-decoration: none;
     font-weight: 700;
-    transition: color 0.2s;
-    letter-spacing: 0.1rem;
+    @media (min-width: 900px){
+        transition: color 0.2s;
+        letter-spacing: 0.1rem;
+    }
 }
 
 .gnav-logo-link{
     @media (max-width: 899px){
-        position: absolute;
-        top: 0%;
+        min-width: 0;
+        transform: scale(0.4);
     }
 }
 
 .gnav-logo{
-    height: 100%;
-    transition: filter 0.2s;
+    @media (min-width: 900px){
+        height: 100%;
+        transition: filter 0.2s;
+    }
+
+    @media (max-width: 899px){
+
+    }
 }
 
 .gnav-logo:hover{
@@ -232,7 +240,9 @@ html{
 .maincon__about, .maincon__access{
     display: flex;
     margin-bottom: 150px;
-    scroll-margin-top: 140px;
+    @media (min-width: 900px){
+        scroll-margin-top: 140px;
+    }
 
     @media (max-width: 899px){
     flex-direction: column;
@@ -295,6 +305,7 @@ html{
 .maincon__access-head{
     @media (min-width: 900px){
         writing-mode: vertical-rl;
+        text-orientation: upright;
     }
 }
 
@@ -320,7 +331,7 @@ html{
     background: #444;
     color: #fff;
     line-height: 1.8rem;
-        padding: 20px 30px;
+        padding: 30px 30px;
 
     @media(min-width: 900px){
         align-items: flex-end;
@@ -388,6 +399,23 @@ html{
         fill: #aaa;
         transition: fill 0.2s;
     }
+}
+
+.foot__nav{
+    @media (min-width: 900px){
+        display: none;
+    }
+
+    @media (max-width: 899px){
+        border-bottom: 2px solid #fff;
+        border-top: 2px solid #fff;
+        margin-bottom: 30px;
+    }
+}
+
+.foot__nav-link{
+    color:#fff;
+    padding: 10px 5px;
 }
 
 .foot-left, .foot-txt1, .foot-txt2{
